@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ trợ & Chính sách Quyền riêng tư - VKS QLCV</title>
+    <meta name="description" content="Trang hỗ trợ chính thức và chính sách quyền riêng tư của Hệ thống Quản lý Công việc (VKS QLCV) ngành Kiểm sát Nhân dân.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-hover: #0369a1;
+            --primary-light: #e0f2fe;
+            --secondary: #0f172a;
+            --accent: #3b82f6;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --success: #22c55e;
+            --success-light: #f0fdf4;
+            --warning: #eab308;
+            --warning-light: #fefce8;
+            --error: #ef4444;
+            --error-light: #fef2f2;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+            line-height: 1.7;
+            padding-bottom: 60px;
+        }
+
+        /* Header Style */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: #ffffff;
+            padding: 80px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+            animation: pulse 15s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.1) translate(2%, 2%); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .app-badge {
+            background: rgba(2, 132, 199, 0.2);
+            border: 1px solid rgba(2, 132, 199, 0.4);
+            color: #38bdf8;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* Container Layout */
+        main {
+            max-width: 1040px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Quick Navigation Bar */
+        .quick-nav {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 12px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .quick-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .quick-nav a:hover {
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        /* Card Elements */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 24px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        h2 svg {
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 24px 0 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        /* Notice Panel */
+        .notice {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 18px 20px;
+            border-radius: var(--radius-sm);
+            margin: 20px 0;
+            color: #0369a1;
+            font-size: 15px;
+        }
+
+        .notice-danger {
+            background: var(--error-light);
+            border-left: 4px solid var(--error);
+            color: #c2410c;
+        }
+
+        /* Lists */
+        ol, ul {
+            padding-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        ol li::marker {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Link Customization */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        /* Grid for Cards/Lists */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 30px;
+            }
+            .card {
+                padding: 24px;
+            }
+            .quick-nav {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 40px 20px 20px;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="app-badge">Hệ thống Nghiệp vụ</div>
+        <h1>Hỗ trợ & Chính sách Quyền riêng tư VKS QLCV</h1>
+        <p>Trung tâm hỗ trợ sử dụng và công bố chính sách bảo mật thông tin dành riêng cho Hệ thống Quản lý Công việc ngành Kiểm sát Nhân dân.</p>
+    </div>
+</header>
+
+<main>
+    <!-- Quick Navigation -->
+    <div class="quick-nav">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#huong-dan">Hướng dẫn sử dụng</a>
+        <a href="#su-co">Xử lý sự cố</a>
+        <a href="#bao-mat">Bảo mật & Quyền riêng tư</a>
+        <a href="#chinh-sach">Chính sách chi tiết</a>
+        <a href="#lien-he">Liên hệ hỗ trợ</a>
+    </div>
+
+    <!-- Section: Giới thiệu -->
+    <section class="card" id="gioi-thieu">
+        <h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+            Giới thiệu Hệ thống VKS QLCV
+        </h2>
+        <p><strong>VKS QLCV</strong> là hệ thống quản lý công việc nội bộ được phát triển và áp dụng thống nhất trong toàn ngành Kiểm sát nhân dân Việt Nam. Hệ thống phục vụ việc quản lý đa cấp từ <strong>Viện kiểm sát nhân dân tối cao</strong>, <strong>Viện kiểm sát nhân dân cấp tỉnh</strong> cho đến <strong>Viện kiểm sát nhân dân cấp huyện</strong>.</p>
+        <p>Với cơ chế phân cấp quản lý rõ ràng, theo dõi và phê duyệt trực tiếp, VKS QLCV giúp tự động hóa quy trình nghiệp vụ, số hóa bảng theo dõi (Kanban Board), ghi nhận báo cáo tiến độ hàng ngày và tổng hợp báo cáo KPI tự động cho lãnh đạo các cấp, nhằm bảo đảm tính minh bạch, chính xác và kịp thời trong hoạt động quản lý chỉ đạo điều hành.</p>
+    </section>
+
+    <!-- Section: Hướng dẫn sử dụng -->
+    <section class="card" id="huong-dan">
+        <h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Hướng dẫn sử dụng cơ bản
+        </h2>
+        
+        <h3>1. Đăng nhập hệ thống</h3>
+        <ol>
+            <li>Truy cập vào địa chỉ chính thức của hệ thống (nội bộ hoặc VPN được cấp phép).</li>
+            <li>Chọn hình thức đăng nhập: Sử dụng tài khoản đăng nhập tập trung <strong>SSO</strong> hoặc tài khoản nghiệp vụ cá nhân do Quản trị viên cung cấp.</li>
+            <li>Nếu đăng nhập lần đầu tiên, hệ thống sẽ yêu cầu thay đổi mật khẩu mặc định để bảo mật an toàn thông tin.</li>
+        </ol>
+
+        <h3>2. Theo dõi và Cập nhật công việc</h3>
+        <ol>
+            <li>Truy cập <strong>Không gian làm việc (Workspace)</strong> hoặc <strong>Bảng công việc (Board)</strong> để xem danh sách nhiệm vụ được phân công.</li>
+            <li>Chọn nhiệm vụ cần xử lý để xem chi tiết yêu cầu, tài liệu đính kèm, hạn hoàn thành và các ý kiến chỉ đạo.</li>
+            <li>Trong quá trình thực hiện, cập nhật trạng thái nhiệm vụ (Chờ thực hiện &rarr; Đang thực hiện &rarr; Chờ phê duyệt).</li>
+            <li>Khi hoàn thành nhiệm vụ, đính kèm kết quả thực hiện (văn bản báo cáo, tệp tin nghiệp vụ) và nhấn <strong>Gửi phê duyệt hoàn thành</strong>.</li>
+        </ol>
+
+        <h3>3. Phê duyệt và Giao việc (Dành cho Lãnh đạo/Quản lý)</h3>
+        <ol>
+            <li><strong>Giao việc mới:</strong> Lãnh đạo hoặc Trưởng phòng tạo công việc trực tiếp, gán Người chủ trì (Assignee), Người phối hợp (Collaborator), thiết lập hạn hoàn thành và quy trình phê duyệt (nếu cần).</li>
+            <li><strong>Duyệt kết quả:</strong> Khi nhận được thông báo yêu cầu phê duyệt hoàn thành từ cấp dưới, người có thẩm quyền kiểm tra kết quả, đưa ra đánh giá Đạt/Không đạt kèm ý kiến phản hồi và quyết định phê duyệt.</li>
+        </ol>
+    </section>
+
+    <!-- Section: Xử lý sự cố -->
+    <section class="card" id="su-co">
+        <h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><mpath d="M21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+            Xử lý sự cố thường gặp
+        </h2>
+
+        <div class="grid-2">
+            <div>
+                <h3>Không đăng nhập được hệ thống</h3>
+                <ul>
+                    <li>Xác minh kết nối mạng nội bộ ngành hoặc trạng thái kết nối VPN cơ quan.</li>
+                    <li>Đảm bảo mật khẩu không bị hết hạn (hệ thống yêu cầu đổi mật khẩu định kỳ 90 ngày).</li>
+                    <li>Sử dụng chức năng "Quên mật khẩu" nếu được cấu hình hoặc liên hệ trực tiếp với Cán bộ quản trị công nghệ thông tin tại đơn vị để khôi phục mật khẩu.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Không nhận được thông báo mới</h3>
+                <ul>
+                    <li>Đối với phiên bản Web: Đảm bảo trình duyệt được cho phép hiển thị thông báo từ hệ thống.</li>
+                    <li>Đối với ứng dụng di động (Mobile App): Kiểm tra quyền gửi thông báo trong phần Cài đặt thiết bị di động.</li>
+                    <li>Đảm bảo tài khoản chưa bị khóa hoặc thu hồi quyền truy cập.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="notice notice-danger">
+            <strong>Cảnh báo quan trọng:</strong> Trường hợp thiết bị di động cá nhân bị mất hoặc thay đổi thiết bị cài đặt ứng dụng liên kết VKS QLCV, Cán bộ phải liên hệ ngay với Quản trị viên hệ thống để thu hồi phiên đăng nhập hiện tại và bảo vệ an toàn dữ liệu công vụ.
+        </div>
+    </section>
+
+    <!-- Section: Bảo mật & Quyền riêng tư -->
+    <section class="card" id="bao-mat">
+        <h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Bảo mật & Quyền riêng tư
+        </h2>
+        <p>Hệ thống VKS QLCV đặt tiêu chuẩn bảo mật dữ liệu công vụ lên hàng đầu. Toàn bộ thông tin tài khoản, cấu trúc tổ chức, nội dung công việc và các tài liệu đính kèm đều được mã hóa và bảo vệ nghiêm ngặt:</p>
+        <ul>
+            <li><strong>Lưu trữ tập trung và an toàn:</strong> Dữ liệu được lưu trữ trực tiếp trên hệ thống máy chủ cơ sở dữ liệu nội bộ của ngành Kiểm sát Nhân dân dưới sự quản lý trực tiếp của Trung tâm Công nghệ và Dữ liệu số.</li>
+            <li><strong>Bảo mật đường truyền:</strong> Mọi kết nối truy cập hệ thống qua Web hay Mobile đều bắt buộc sử dụng giao thức HTTPS được mã hóa SSL/TLS.</li>
+            <li><strong>Kiểm soát truy cập chặt chẽ:</strong> Phân quyền động chi tiết theo vai trò công tác (Superuser, Org Admin, Org Leader, Member) bảo đảm cán bộ chỉ có thể tiếp cận, xem và xử lý các thông tin thuộc phạm vi thẩm quyền của mình.</li>
+            <li><strong>Nhật ký hệ thống (Audit Trail):</strong> Ghi nhận đầy đủ thông tin về lịch sử thao tác, thay đổi dữ liệu, địa chỉ IP và thông tin thiết bị truy cập để phục vụ công tác thanh tra, giám sát an toàn thông tin.</li>
+        </ul>
+        <p>Xem toàn văn chính sách bảo mật chi tiết tại phần <a href="#chinh-sach-quyen-rieng-tu">Chính sách Quyền riêng tư của VKS QLCV</a>.</p>
+    </section>
+
+    <!-- Section: Chính sách quyền riêng tư chi tiết -->
+    <section class="card" id="chinh-sach-quyen-rieng-tu">
+        <h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Chính sách Quyền riêng tư của VKS QLCV
+        </h2>
+        <p><strong>Ngày cập nhật:</strong> 25/06/2026</p>
+
+        <h3>1. Phạm vi áp dụng</h3>
+        <p>Chính sách quyền riêng tư này mô tả cách thức hệ thống VKS QLCV (bao gồm cổng thông tin Web và ứng dụng di động) thu thập, lưu trữ, sử dụng và bảo vệ thông tin trong quá trình người dùng sử dụng ứng dụng để thực hiện công tác quản lý chỉ đạo và điều hành công việc nghiệp vụ.</p>
+
+        <h3>2. Dữ liệu được hệ thống xử lý</h3>
+        <p>Để vận hành các chức năng nghiệp vụ, hệ thống sẽ tiếp nhận và xử lý các thông tin bao gồm:</p>
+        <ul>
+            <li>Thông tin định danh người dùng: Họ và tên, tài khoản công vụ, chức vụ, phòng ban, đơn vị trực thuộc.</li>
+            <li>Thông tin xử lý công việc: Nội dung công việc giao nhận, tiến độ, thời hạn thực hiện, ý kiến phản hồi và kết quả phê duyệt.</li>
+            <li>Tệp tài liệu nghiệp vụ đính kèm do người dùng tải lên để báo cáo kết quả.</li>
+            <li>Dữ liệu vận hành hệ thống: Lịch sử thao tác (Log actions), địa chỉ IP truy cập, thông tin về trình duyệt và thiết bị truy cập.</li>
+        </ul>
+
+        <h3>3. Các quyền hạn đặc biệt trên thiết bị di động</h3>
+        <p>Đối với ứng dụng di động VKS QLCV (phiên bản Android và iOS), ứng dụng có thể yêu cầu một số quyền truy cập sau:</p>
+        <ul>
+            <li><strong>Quyền Bộ nhớ/Tệp tin (File Access):</strong> Để người dùng có thể chọn và tải tệp văn bản báo cáo hoặc kết quả xử lý công việc lên hệ thống trực tiếp từ thiết bị.</li>
+            <li><strong>Quyền Camera:</strong> Chỉ sử dụng khi người dùng thực hiện các tính năng như quét mã QR để đăng nhập nhanh hoặc chụp ảnh kết quả công vụ đính kèm báo cáo trực tiếp. Ứng dụng không tự ý chụp ảnh hoặc gửi dữ liệu camera khi không có thao tác từ người dùng.</li>
+            <li><strong>Quyền Thông báo (Push Notification):</strong> Để gửi cảnh báo tức thì khi có công việc mới được giao, có nhiệm vụ quá hạn hoặc khi ý kiến chỉ đạo mới từ cấp trên được cập nhật.</li>
+        </ul>
+
+        <h3>4. Thu thập và Chia sẻ thông tin</h3>
+        <p>VKS QLCV cam kết:</p>
+        <ul>
+            <li>Không thu thập dữ liệu nhằm mục đích quảng cáo hoặc xây dựng hồ sơ thương mại của cán bộ.</li>
+            <li>Không chia sẻ hoặc bán bất kỳ dữ liệu cá nhân, dữ liệu công vụ nào cho bên thứ ba ngoài mục đích phối hợp nghiệp vụ giữa các đơn vị thuộc ngành Kiểm sát Nhân dân theo quy định của pháp luật.</li>
+            <li>Mọi dữ liệu công việc chỉ được lưu giữ an toàn trên hạ tầng công nghệ thông tin do Viện kiểm sát nhân dân tối cao quản lý.</li>
+        </ul>
+
+        <h3>5. Thời gian lưu trữ dữ liệu</h3>
+        <p>Thông tin công việc được lưu trữ lâu dài trên hệ thống để phục vụ công tác theo dõi hiệu suất công tác của đơn vị qua các năm. Dữ liệu công việc bị xóa (Xóa mềm - Soft delete) vẫn được lưu giữ trong Thùng rác hệ thống (Retention period mặc định là 30 ngày) trước khi được dọn dẹp hoặc lưu trữ vĩnh viễn theo chính sách lưu trữ của đơn vị.</p>
+
+        <h3>6. Chỉnh sửa và Xóa dữ liệu</h3>
+        <p>Người dùng có quyền chỉnh sửa các nội dung báo cáo công việc do mình phụ trách trước khi gửi phê duyệt. Mọi yêu cầu liên quan đến thay đổi tài khoản, quyền hạn truy cập hoặc điều chỉnh các dữ liệu lịch sử phải được gửi tới Quản trị viên hệ thống để thực hiện theo quy trình quy định của ngành.</p>
+    </section>
+
+    <!-- Section: Liên hệ hỗ trợ -->
+    <section class="card" id="lien-he">
+        <h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Liên hệ hỗ trợ kỹ thuật
+        </h2>
+        <p>Mọi vướng mắc kỹ thuật, yêu cầu cấp mới tài khoản hoặc báo lỗi trong quá trình sử dụng Hệ thống Quản lý Công việc VKS QLCV, vui lòng liên hệ:</p>
+        
+        <div style="margin-top: 20px;">
+            <p><strong>Ứng dụng công vụ:</strong> VKS QLCV (Phiên bản Web & Di động)</p>
+            <p><strong>Đơn vị phát hành & Vận hành:</strong> TRUNG TÂM CÔNG NGHỆ VÀ DỮ LIỆU SỐ - CỤC THỐNG KÊ TỘI PHẠM VÀ CHUYỂN ĐỔI SỐ - VIỆN KIỂM SÁT NHÂN DÂN TỐI CAO</p>
+            <p><strong>Cán bộ đầu mối hỗ trợ:</strong> Phòng Quản lý Cơ sở Dữ liệu & Ứng dụng Nghiệp vụ</p>
+            <p><strong>Email hỗ trợ:</strong> <a href="mailto:hienpt_c2@vks.gov.vn">hienpt_c2@vks.gov.vn</a></p>
+            <p><strong>Thời gian hỗ trợ trực tuyến:</strong> Giờ hành chính, từ thứ Hai đến thứ Sáu hàng tuần</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-logo">Hệ thống QLCV</div>
+    <div>© 2026 Viện kiểm sát nhân dân tối cao. Bảo lưu mọi quyền.</div>
+</footer>
+
+</body>
+</html>
